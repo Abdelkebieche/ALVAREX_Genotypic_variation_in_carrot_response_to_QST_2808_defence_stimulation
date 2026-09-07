@@ -279,7 +279,7 @@ Genes with MAD values at or above the 60th percentile are retained, correspondin
 Module-response associations are analysed using mixed models of the form:
 
 ```text
-module eigengene ~ response class + (1 | genotype)
+module eigengene ~ response class 
 ```
 
 Module membership (kME) is calculated using biweight midcorrelation.
@@ -355,15 +355,7 @@ weight01 algorithm
 
 The reference universe contains genes retained/tested in the differential-expression analysis for which GO annotations are available.
 
-GO terms are retained for interpretation when:
 
-```text
-weight01 P < 0.05
-```
-
-and at least four genes from the tested query set are assigned to the term.
-
-Because selection is based on the unadjusted topology-aware `weight01` P-value, GO enrichment is interpreted as an exploratory functional summary.
 
 ---
 
